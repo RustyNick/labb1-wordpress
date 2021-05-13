@@ -10,7 +10,7 @@ add_action('after_setup_theme', 'register_menu');
 //Meny i headern
 register_nav_menus(
     array(
-        'menu-header' => 'Header meny'
+        'meny-header' => 'meny-header'
         )
 );
 ?>
