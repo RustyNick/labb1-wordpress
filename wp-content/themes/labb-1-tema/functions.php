@@ -12,4 +12,41 @@ register_nav_menus(
         )
 );
 
+
+//widget för footer
+register_sidebar(
+    [
+        'name' => 'Footer left',
+        'description'=> 'vänster info',
+        'id' => 'footerleft',
+        'before_widget' => ''
+    ]
+);
+
+register_sidebar(
+    [
+        'name' => 'Footer middle',
+        'description'=> 'centrerad info',
+        'id' => 'footercenter',
+        'before_widget' => ''
+    ]
+);
+
+register_sidebar(
+    [
+        'name' => 'Footer right',
+        'description'=> 'höger info',
+        'id' => 'footerright',
+        'before_widget' => ''
+    ]
+);
+register_sidebar(
+    [
+        'name' => 'Footer bottom',
+        'description'=> 'bottom footer',
+        'id' => 'footerbottom',
+        'before_widget' => ''
+    ]
+);
+
 ?>
