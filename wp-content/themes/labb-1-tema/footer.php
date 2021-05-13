@@ -21,20 +21,9 @@
 					</div>
 					<div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
 						<h4>Social media</h4>
-						<ul class="social">
-							<li>
-								<i class="fa fa-facebook"></i> <a href="">Facebook</a>
-							</li>
-							<li>
-								<i class="fa fa-twitter"></i> <a href="">Twitter</a>
-							</li>
-							<li>
-								<i class="fa fa-instagram"></i> <a href="">Instagram</a>
-							</li>
-							<li>
-								<i class="fa fa-linkedin"></i> <a href="">LinkedIn</a>
-							</li>
-						</ul>
+						<div class="col-xs-12">
+						<?php wp_nav_menu( array( 'theme_location' => 'meny-footer' ) ); ?>
+					</div>
 					</div>
 				</div>
 				<div class="row bottom">
@@ -46,8 +35,5 @@
 		</footer>
 
 	</div>
-
-	<script src="js/script.js"></script>
-
 </body>
 </html>
