@@ -1,5 +1,5 @@
+<?php wp_footer(); ?>
 <footer id="footer">
-    <?php wp_footer(); ?>
 			<div class="container">
 				<div class="row top">
 					<div class="col-xs-12 col-sm-6 col-md-4">
