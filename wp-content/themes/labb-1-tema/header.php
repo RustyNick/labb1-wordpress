@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri().'/css/font-awesome.css' ?>">
 
     <link rel="stylesheet" href="<?php echo get_template_directory_uri().'/style.css'?>">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri().'/css/header.css' ?>">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri().'/css/style.css'?>">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri().'/css/header.css' ?>">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri().'/css/footer.css' ?>">
 	
-	<script defer src=<?php echo get_template_directory_uri(). "js/script.js"?>></script>
-	<script defer src=<?php echo get_template_directory_uri(). "js/jquery.js"?>></script>
+	<script defer src=<?php echo get_template_directory_uri().'/js/script.js'?>></script>
+	<script src=<?php echo get_template_directory_uri().'/js/jquery.js'?>></script>
 	<title><?php get_the_title()?></title>
 </head>
 <body >
@@ -26,13 +27,7 @@
 						<a class="logo" href="index.php">Labb 1</a>
 					</div>
 					<div class="col-sm-6 hidden-xs">
-						<form id="searchform" class="searchform">
-							<div>
-								<label class="screen-reader-text">Sök efter:</label>
-								<input type="text" />
-								<input type="submit" value="Sök" />
-							</div>
-						</form>
+					<?php get_search_form(); ?> 
 					</div>
 					<div class="col-xs-4 text-right visible-xs">
 						<div class="mobile-menu-wrap">
