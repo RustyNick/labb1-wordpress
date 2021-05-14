@@ -16,9 +16,7 @@ get_header(); /* kallar på header */
                                         the_post_thumbnail_url(); ?>" /> <!-- hämtar bild -->
                             <h2 class="title">
                                 <a href="<?php the_permalink() //postens permalänk 
-                                            ?>"><?php the_title(); // postens titel
-                                                                                                    ?></a>
-                            </h2>
+                                            ?>"><?php the_title(); // postens titel?></a></h2>
                             <div class="meta">
 
                                 <ul class="meta">
@@ -39,9 +37,8 @@ get_header(); /* kallar på header */
 											
 										</article>
 									</div>
-
-                            <aside id="secondary" class="col-xs-12 col-md-3">
-							<div id="sidebar">
+									<aside id="secondary" class="col-xs-12 col-md-3">
+								<div id="sidebar">
 								<!-- search form -->
 								<ul role="navigation">
 									<li class="pagenav">
@@ -63,6 +60,7 @@ get_header(); /* kallar på header */
 								</ul>
 							</div>
 						</aside>
+                            
 								</div>
 							</div>
 						</section>			

@@ -5,15 +5,29 @@ get_header();
 if (have_posts() ) {
     while ( have_posts() ) {
 
-        the_post();
-    
-        echo '<h3>';
-        the_title();
-        echo '</h3>';
+        the_post();        
+?>
+        <main>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="hero">
+                            <div class="text">
+                            <?php the_title();?>
+                          <p>
+                          <?php the_content(); ?>
+                          </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        echo '<p>';
-        the_content();
-        echo '</p>';
+<?php
+
     }
 } else {
     echo 'Finns inget att visa här';
