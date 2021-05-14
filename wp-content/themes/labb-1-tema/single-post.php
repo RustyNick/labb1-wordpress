@@ -19,16 +19,40 @@ get_header(); /* kallar på header */
                             </h2>
 
                             <ul class="meta">
-                                <li>Datum:</li>
-                                <li><a href=""><?php the_date(); ?></a></li> <!-- hämtar datum -->
-                                <li>Författare:</li>
-                                <li><a href=""><?php the_author(); ?></a></li> <!-- hämtar författaren -->
-                                <li>Kategori:</li>
-                                <li><a href=""><?php the_category('<a>, '); ?></a></li> <!-- hämtar kategorin -->
-                            </ul>
+                                    <li class="fa fa-calendar"></li>
+                                    <li><a href=""><?php the_date(); ?></a></li> <!-- datum --> 
+                                    <li class="fa fa-user"></li>
+                                    <li><a href=""><?php the_author_posts_link(); ?></a></li> <!--  författaren -->
+                                    <li class="fa fa-tag"></li>
+                                    <li><a href=""><?php the_category('<a>, '); ?></a></li> <!--  kategorin -->
+                                </ul>
                             <p><?php the_content(); ?></p> <!-- hämtar texten i inlägget -->	
 										</article>
 									</div>
+
+                            <aside id="secondary" class="col-xs-12 col-md-3">
+							<div id="sidebar">
+								<!-- search form -->
+								<ul role="navigation">
+									<li class="pagenav">
+										<!-- kort meny -->
+						                <?php dynamic_sidebar('aside-top');?>
+									</li>
+									<li>
+										<!-- kort arkiv -->
+						            <?php dynamic_sidebar('aside-middle');?>
+
+									</li>
+									<li class="categories">
+										<!-- Kategorier -->
+						            <?php dynamic_sidebar('aside-bottom');?>
+
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</aside>
 								</div>
 							</div>
 						</section>			

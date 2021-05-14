@@ -16,7 +16,7 @@ if (have_posts() ) {
         echo '</p>';
     }
 } else {
-    echo 'Denna sidan är tom.';
+    echo 'Finns inget att visa här';
 }
 
 get_footer();
