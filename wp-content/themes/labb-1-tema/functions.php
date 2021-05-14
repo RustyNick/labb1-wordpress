@@ -23,7 +23,8 @@ add_action('init', 'add_author_support_to_posts');
 register_nav_menus(
     array(
         'meny-header' => 'meny-header',
-        'meny-footer' => 'Meny placed in footer'
+        'meny-footer' => 'Meny placed in footer',
+        'side-menu' =>'side-menu'
         )
 );
 
@@ -50,6 +51,17 @@ register_sidebar(
         'name' => 'aside bottom',
         'description'=> 'aside-bottom',
         'id' => 'aside-bottom',
+        'before_widget' => ''
+    ]
+);
+
+
+//widget för undersida
+register_sidebar(
+    [
+        'name' => 'side-menu',
+        'description'=> 'side-menu',
+        'id' => 'side-menu',
         'before_widget' => ''
     ]
 );
