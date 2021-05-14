@@ -18,7 +18,7 @@ function add_author_support_to_posts(){
 }
 
 add_action('init', 'add_author_support_to_posts');
-// adding pagination
+// lägger till pagination
 function pagination_bar(){
     global $wp_query;
 
