@@ -4,27 +4,25 @@ get_header();?>
 
 <main>
     <section>
-							<div class="container">
-								<div class="row">
-									<div id="primary" class="col-xs-12 col-md-9">
+	    <div class="container">
+			<div class="row">
+				<div id="primary" class="col-xs-12 col-md-9">
 
-<?php
-if (have_posts() ) {?>
+<?php if (have_posts() ) {?>
  <h1 class="search-title">
 <?php echo $wp_query->found_posts; ?> <?php _e( 'Sökresultat för', 'locale' ); ?>: "<?php the_search_query(); ?>"
 </h1>
-							<div class="searchform-wrap">
+	<div class="searchform-wrap">
     <?php get_search_form();?>
     </div>
-    <?php
+        <div class="container">
+        <div class="row">
+            <div id="primary" class="col-xs-12 col-md-9">
+				 
+            <?php
     while ( have_posts() ) {
-               the_post();        
-?>
-
-							<div class="container">
-								<div class="row">
-									<div id="primary" class="col-xs-12 col-md-9"> 
-						      
+        the_post();        
+        ?>
                                     <article>
 
 										<img src="<?php
@@ -51,19 +49,24 @@ if (have_posts() ) {?>
 											
 											
 										</article>
+                                        <?php 
+                                        } }else {
+                                            echo 'Inget resultat';
+                                        } /* avslutar loopen */
+                                        ?>
 									</div>
 								</div>
 							</div>
 						</section>			
-						
+                        <nav class="navigation pagination">
+							<?php pagination_bar(); ?>
+							</nav>
 					</main>
+         
 
 <?php
 
-    }
-} else {
-   echo 'Finns inget att visa här';
-}
+                                    
 
 get_footer();
 

@@ -2,17 +2,17 @@
 get_header(); /* kallar på header */
 ?>
 
-<?php while (have_posts()) { //startar loopen för content?>
 <main>
-						
-						<section>
-							<div class="container">
-								<div class="row">
-									<div id="primary" class="col-xs-12 col-md-9">
-									<h1><?php the_author(); ?></h1>
-            <?php the_post();?>
-									
-										<article>
+	
+	<section>
+		<div class="container">
+			<div class="row">
+				<div id="primary" class="col-xs-12 col-md-9">
+					<h1><?php the_author(); ?></h1>
+					
+					<?php while (have_posts()) { //startar loopen för content?>
+						<?php the_post();?>
+					<article>
 
 										<img src="<?php
                                         the_post_thumbnail_url(); ?>" /> <!-- hämtar bild -->
@@ -40,6 +40,9 @@ get_header(); /* kallar på header */
 											
 											
 										</article>
+										<?php
+										} //avslutar loopen
+										?>
 									</div>
 
                             <aside id="secondary" class="col-xs-12 col-md-3">
@@ -70,9 +73,7 @@ get_header(); /* kallar på header */
 						</section>			
 						
 					</main>
-<?php
-} //avslutar loopen
-?>
+
 </div>
 
 
